@@ -1,0 +1,66 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        <!--Interpolation-->
+        {{pageTitle}}
+    </div>
+<div class='panel-body'>  
+      <div class='row'>
+    <div class='col-md-2'>Filter by vegetables:</div>
+            <div class='col-md-4'>
+                <input type='text'  
+                [(ngModel)] ='listFilter'/>
+            </div>
+</div>
+ <div class='row' >
+            <div class='col-md-6'>
+               <h3> Filtered by : {{listFilter}} </h3>
+            </div>
+        </div>
+           <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+        
+ <div class='table-responsive'>
+     <!--Example for Structural Directive-->
+      <table class='table' *ngIf='vegetables && vegetables.length' >
+          <thead>
+                    <tr>
+                        <th>
+                             <button class='btn btn-primary' 
+                             (click) ='toggleImage()'>   
+                              {{showImage ? 'Hide' : 'Show'}} Image
+                              </button>
+                        </th>
+                        <th>Vegetable</th>
+                        <th>Code</th>
+                        <th>Description</th>                        
+                        <th>Price</th>
+                        <th>Sold By</th>                        
+                        <th>5 Star Rating</th>
+                    </tr>
+          </thead>
+          <tbody>
+              <!--Custome Filter-->
+              <tr *ngFor = 'let vegetable of vegetables | vegetableFilter:listFilter' >
+                  <td>
+                  <!--Property Binding-->
+                  <img [src] ='vegetable.imageUrl' [title]='vegetable.vegetableName'
+                  [style.width.px]='imageWidth' [style.margin.px]= 'imageMargin' *ngIf='showImage'>
+                  </td>
+                  <!--END-->
+                  <td> <a [routerLink] ="['/vegetable',vegetable.vegetableId]">  
+                      {{vegetable.vegetableName}} </a></td>
+                   <td> {{vegetable.vegetableCode |uppercase  }} </td>
+                    <td> {{vegetable.description}} </td>                    
+                    <td> {{vegetable.price | currency:'USD':true:'1.2-2' }} </td>
+                     <td> {{vegetable.soldBy}} </td>        
+                   <td>
+                       <!--Passing Data from component using @input-->
+                        <ai-star [rating] = 'vegetable.starRating' 
+                        (ratingClicked) ='onRatingClicked($event)'></ai-star> 
+                   </td>
+              </tr>
+          </tbody>
+      </table>
+ </div>
+</div>
+</div>
+

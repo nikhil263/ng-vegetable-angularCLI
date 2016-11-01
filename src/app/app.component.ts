@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import {VegetableService} from './vegetables/vegetable.service'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    providers:[VegetableService]
 })
 export class AppComponent {
-  title = 'app works!';
+   pageTitle: string = "Vegetable Market";
 }

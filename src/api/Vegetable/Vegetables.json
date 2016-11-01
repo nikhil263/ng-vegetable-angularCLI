@@ -1,0 +1,43 @@
+[
+    {
+        "vegetableId": 1,
+        "vegetableName": "Tomato",
+        "vegetableCode": "GDN-0011",   
+        "description": "I'm rich in vitamin C",
+        "soldBy": "March 19, 2016",
+        "price": 1.95,
+        "starRating": 3.2,
+        "imageUrl": "http://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Vegetables-PNG/Tomato_PNG_Clipart_Picture.png?"
+    },
+    {
+        "vegetableId": 2,
+        "vegetableName": "Green Pepper",
+        "vegetableCode": "GDN-0023",       
+        "description": "I'm rich in vitamin B",
+           "soldBy": "March 19, 2016",
+        "price": 3.99,
+        "starRating": 4.2,
+        "imageUrl": "http://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Vegetables-PNG/Green_Pepper_PNG_Clipart_Image.png"
+    },
+    {
+        "vegetableId": 5,
+        "vegetableName": "Cucamber",
+        "vegetableCode": "TBX-0048",
+        "description": "I'm rich in vitamin A",
+           "soldBy": "March 19, 2016",
+        "price": 8.9,
+        "starRating": 4.8,
+        "imageUrl": "http://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Vegetables-PNG/Transparent_Cucamber_PNG_Clipart_Picture.png?"
+    },
+    {
+        "vegetableId": 8,
+        "vegetableName": "Onion",
+        "vegetableCode": "TBX-0022",      
+        "description": "I'm rich in vitamin E",
+           "soldBy": "March 19, 2016",
+        "price": 1.55,
+        "starRating": 3.7,
+        "imageUrl": "http://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Vegetables-PNG/Onion_PNG_Picture.png"
+    }
+   
+]

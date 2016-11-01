@@ -1,0 +1,46 @@
+<div class='panel panel-primary' *ngIf='vegetable'>
+    <div class='panel-heading' style='font-size:large'>
+        {{pageTitle }}
+    </div>
+
+       <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>Name:</div>
+                    <div class='col-md-6'>{{vegetable.vegetableName}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Code:</div>
+                    <div class='col-md-6'>{{vegetable.vegetableCode}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Description:</div>
+                    <div class='col-md-6'>{{vegetable.description}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Sold By:</div>
+                    <div class='col-md-6'>{{vegetable.soldBy}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Price:</div>
+                    <div class='col-md-6'>{{vegetable.price|currency:'USD':true}}</div>
+                </div>
+               
+
+            <div class='col-md-6'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='vegetable.imageUrl'
+                     [title]='vegetable.vegetableName'>
+            </div>
+        </div>
+    </div>
+
+     <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+</div>
